@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deconstructed</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Professional font */
+            background-color: #222; /* Dark theme background */
+            color: #fff; /* Light text color */
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333; /* Dark theme background for sections */
+            border: 1px solid #555; /* Border for a clean look */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow for a subtle lift */
+        }
+
+        .menu-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .menu-option {
+            text-align: center;
+            width: 20%;
+            padding: 10px;
+            background-color: #444; /* Darker background for menu options */
+            border: 1px solid #555; /* Border for a clean look */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+        }
+
+        .menu-option:hover {
+            background-color: #555; /* Lighter background on hover */
+        }
+
+        .summary {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .professional-details {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .professional-details div {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .blog-posts,
+        .repos {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .blog-posts div {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .repos a {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: large;
+            background-color: #0f0f0f;
+        } 
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .menu-options {
+                display: none;
+            }
+
+            .menu-panel {
+                display: flex;
+                justify-content: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: #444; /* Darker background for menu panel */
+                border-top: 1px solid #555; /* Border for a clean look */
+                z-index: 1000;
+            }
+
+            .menu-option {
+                width: 40%;
+            }
+        }
+
+        /* Professional Styling */
+        h1, h2, h3 {
+            color: #fff; /* Light text color */
+        }
+
+        p {
+            color: #bbb; /* Slightly lighter text color */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <main role="main" class="col-md-12 main-content">
+                <header>
+                    <img src="Banner.png" alt="Header Image">
+                    <h3>Let's simplify things</h3>
+                </header>
+
+                <!-- Menu Options -->
+                <div class="menu-options">
+                    <div class="menu-option" onclick="showAll()">Home</div>
+                    <div class="menu-option" onclick="showSection('professional-info')">Professional Info</div>
+                    <div class="menu-option" onclick="showSection('blog-posts')">Blog Posts</div>
+                    <div class="menu-option" onclick="showSection('repos')">Repositories</div>
+                    <div class="menu-option" onclick="showSection('contact')">Contact Info</div>
+                </div>
+
+                <!-- Sections -->
+                <section id="summary-header" class="header">
+                    <h2>Vik Verma</h2>
+                </section>
+                <section id="summary" class="summary">
+                    <p>Greetings! I am Vik Verma, a dedicated Cybersecurity Advisor with a passion for securing digital landscapes and empowering individuals and organizations to navigate the complexities of the digital world safely.</p>
+                    <p>Throughout my career, I have led and implemented large-scale technology and business programs, demonstrating a strategic approach in aligning technology initiatives with organizational goals. I bring a wealth of experience in designing and implementing robust security strategies to protect against evolving cyber threats. My expertise encompasses threat intelligence, risk assessment, and the deployment of cutting-edge security solutions tailored to meet the unique challenges of today's interconnected environments.</p>
+                    <p>I excel at building influential relationships with key stakeholders, including government agencies. My leadership style is characterized by motivating teams, making impactful decisions, and achieving objectives in dynamic environments.</p>
+                    <p>Beyond my professional credentials, I am deeply committed to the cybersecurity mission, with a passion for contributing to a safer world for children, the elderly, and the community at large.</p>
+                    <p>Feel free to explore my professional details, read my insights in blog posts, and discover the projects I've contributed to. Your cybersecurity is my priority, and I look forward to being your trusted advisor in the realm of digital protection.</p>
+                    <p>Connect with me to discuss how we can strengthen your cybersecurity posture and navigate the evolving threat landscape with confidence.
+                </section>
+
+                <section id="professional-info" class="professional-details">
+                    <div>
+                        <h2>Certifications</h2>
+                        <p>Certified Information Systems Security Professional - CISSP</p>
+                        <p>Microsoft Certified Security Administrator</p>
+                        <p>Certified Data Science Specialist</p>
+
+                        <h2>Core Competency</h2>
+                        <p><strong>Cyber Security: </strong>Experience evaluating and addressing potential weaknesses in digital systems. Knowledge of ongoing threats and trends and understanding of the role of technology in perpetuating child sexual abuse.</p>
+                        <p><strong>Project management: </strong>Implementing large scale technology and business programs, managing timelines and resources, identifying critical path to success.</p>
+                        <p><strong>Strategy development: </strong>Conducting research, analysing data, and identifying opportunities for growth and improvement.</p>
+                        <p><strong>Stakeholder engagement: </strong>Building relationships, working collaboratively with key stakeholders including government agencies and community. Excellent communication skills and ability to translate complicated thoughts.</p>
+                        <p><strong>Leadership: </strong>Ability to provide leadership and guidance to the organisation, motivating direct and indirect reports, and making tough decisions.</p>
+                        <p><strong>Passion and commitment for the mission: </strong>Deeply passionate about the purpose of cyber security to make world a safer place for children, elderly and the whole community.</p>
+
+                        <h2>Education</h2>
+                        <p>Bachelor in Engineering - Computer Science</p>
+                    </div>
+                </section>
+
+                <section id="blog-posts" class="blog-posts">
+                    <h2>Blog Posts</h2>
+                    <div class="menu-option" onclick="GoToBlogs('AI')">AI and Machine Learning </div>
+                    <div class="menu-option" onclick="GoToBlogs('Cyber')">Information Security / Zero Trust</div>
+                    <div class="menu-option" onclick="GoToBlogs('Phy')">Physics</div>
+                    <div class="menu-option" onclick="GoToBlogs('Philosophy')">Philosophy</div>
+                    <!-- Add your blog post content here -->
+                </section>
+
+                <section id="repos" class="repos">
+                    <h2>Repositories</h2>
+                    <a href="https://github.com/EasySecOps/Deconstructued">github/Deconstructed</a>
+                    <a href="https://github.com/EasySecOps/TheComplianceHandbook/blob/main/Summary.md">github/ComplianceHandbook</a>
+                </section>
+
+                <footer id="contact" class="footer">
+                    <p>Contact: your@email.com | Phone: +123456789</p>
+                </footer>
+
+                <!-- Mobile Menu Panel -->
+                <div class="menu-panel">
+                    <div class="menu-option" onclick="showAll()">Home</div>
+                    <div class="menu-option" onclick="showSection('professional-info')">Professional Info</div>
+                    <div class="menu-option" onclick="showSection('blog-posts')">Blog Posts</div>
+                    <div class="menu-option" onclick="showSection('repos')">Repositories</div>
+                    <div class="menu-option" onclick="showSection('contact')">Contact Info</div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // Show Section based on menu click
+        function showSection(sectionId) {
+            $('.main-content section').hide();
+            $('#' + sectionId).show();
+        }
+
+        // Show Section based on menu click
+        function showAll() {
+            $('.main-content section').show();
+        }
+
+        function GoToBlogs(blogCategory){
+            var pagename = 'Blogs' + blogCategory + ".html";
+            window.location.href = pagename;
+        }
+</script>
+
+</body>
+</html>
