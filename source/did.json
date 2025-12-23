@@ -1,0 +1,48 @@
+{
+  "id": "did:web:ideconstruct.com:source",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:ideconstruct.com:source"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://ideconstruct.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/90a43363-81a3-4099-a250-309044339199"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#ad3f86ee31d942d285053b1187c80f71vcSigningKey-f1b44",
+      "controller": "did:web:ideconstruct.com",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "0hWbJQT3UONf8xuU92GUazbujkxim-SymrXEB0CSl90",
+        "y": "UHUyrRem9LH6AkoySeXf3VHWH_hQnq2rtP3bPTJYN5k"
+      }
+    }
+  ],
+  "authentication": [
+    "#ad3f86ee31d942d285053b1187c80f71vcSigningKey-f1b44"
+  ],
+  "assertionMethod": [
+    "#ad3f86ee31d942d285053b1187c80f71vcSigningKey-f1b44"
+  ]
+}
